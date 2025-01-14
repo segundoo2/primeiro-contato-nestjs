@@ -4,7 +4,6 @@ import { AuthController } from './auth.controller';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { UsersModule } from '../users/users.module';
-import { UsersService } from '../users/users.service';
 
 @Module({
   imports: [
@@ -25,9 +24,4 @@ import { UsersService } from '../users/users.service';
   controllers: [AuthController],
   providers: [AuthService],
 })
-export class AuthModule {
-  constructor(
-    private readonly usersSevice,
-    private readonly jwtService,
-  ) {}
-}
+export class AuthModule {}
