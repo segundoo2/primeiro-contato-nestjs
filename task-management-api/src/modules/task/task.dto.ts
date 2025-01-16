@@ -1,4 +1,5 @@
 export class TaskDto {
+  @isUUID()
   id: string;
   title: string;
   description: string;
